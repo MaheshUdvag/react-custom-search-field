@@ -10,6 +10,7 @@ const SearchBar = ({
   Icon,
   searchTerm = "",
   displayIcon = true,
+  placeholder = "Enter search term",
   delay = 0,
   debounceOnChange = false,
   className = "",
@@ -55,7 +56,7 @@ const SearchBar = ({
           className="search-input"
           type="text"
           value={value}
-          placeholder="Enter search term"
+          placeholder={placeholder}
           onInput={onInputHandler}
           onChange={onChangeHandler}
           onKeyPress={(e) => onKeyPressHandler(e.target.value, e)}
