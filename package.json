@@ -2,6 +2,7 @@
   "name": "react-custom-search-field",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://maheshudvag.github.io",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.3",
@@ -15,8 +16,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build:demo": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build:demo",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "react",
