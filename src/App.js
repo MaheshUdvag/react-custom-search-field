@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <SearchBar
-        onInput={(value, event) => console.log(value)}
+        onInput={(value) => console.log(value)}
         debounceOnChange={true}
         delay={300}
         displayIcon={true}
