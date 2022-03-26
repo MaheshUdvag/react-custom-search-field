@@ -7,7 +7,6 @@ function App() {
         onInput={(value, event) => console.log(value)}
         debounceOnChange={true}
         delay={300}
-        placeholder="enter"
         displayIcon={true}
         onIconClickHandler={(value) => console.log("hello", value)}
         Icon={<i className="fa fa-search" aria-hidden="true"></i>}
