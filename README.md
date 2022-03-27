@@ -1,4 +1,4 @@
-# react-custom-search-field
+# custom-react-search-field
 
 **Package**: https://www.npmjs.com/package/custom-react-search-field
 
