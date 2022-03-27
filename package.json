@@ -1,6 +1,6 @@
 {
   "name": "custom-react-search-field",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -35,6 +35,10 @@
     "react",
     "react-search"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaheshUdvag/react-custom-search-field.git"
+  },
   "author": "Mahesh Udvag Ravi",
   "eslintConfig": {
     "extends": [
@@ -58,5 +62,6 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11"
-  }
+  },
+  "license": "MIT"
 }
