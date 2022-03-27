@@ -6,15 +6,17 @@
 
 ## Props
 
-prop | Type | Description 
---- | --- | --- 
-onInput | function | Callback function invoked when search text is updated.
-debounceOnChange | boolean | flag to determine whether to use debounce function when search text is updated.
-delay | number | number of milliseconds to wait to call the callback function when search text is updated.
-displayIcon | boolean | flag to determine whether to show the icon or not.
-onKeyPressHandler | function | Callback function called when a key is pressed. (e.g - can be used to call/redirect to a page on click of enter key)
-onIconClickHandler | function | Callback function called on click of the icon
-Icon | HTMLElement | Element to be shown instead of the default search icon. 
+| prop               | Type        | Description                                                                                                          |
+| ------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------- |
+| onInput            | function    | Callback function invoked when search text is updated.                                                               |
+| debounceOnChange   | boolean     | flag to determine whether to use debounce function when search text is updated.                                      |
+| delay              | number      | number of milliseconds to wait to call the callback function when search text is updated.                            |
+| displayIcon        | boolean     | flag to determine whether to show the icon or not.                                                                   |
+| onKeyPressHandler  | function    | Callback function called when a key is pressed. (e.g - can be used to call/redirect to a page on click of enter key) |
+| onIconClickHandler | function    | Callback function called on click of the icon                                                                        |
+| Icon               | HTMLElement | Element to be shown instead of the default search icon.                                                              |
+| searchTerm         | String      | Default search term                                                                                                  |
+| placeholder        | String      | Placeholder text                                                                                                     |
 
 ## Installation
 
