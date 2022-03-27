@@ -19,8 +19,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 const SearchBar = _ref => {
   let {
-    onInput,
-    onChange,
+    onInput = () => {},
     onKeyPressHandler = () => {},
     onIconClickHandler = () => {},
     Icon,
@@ -38,28 +37,23 @@ const SearchBar = _ref => {
   }, [searchTerm]);
 
   const debounce = (func, delay) => {
-    let debounceTimer;
+    let timer;
     return function (event) {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => func(event.target.value, event), delay);
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        timer = null;
+        func(event.target.value, event);
+      }, delay);
     };
   };
 
   const onInputHandler = event => {
-    if (onInput) {
-      debounceOnChange === true ? debounce(onInput, delay)(event) : onInput(event.target.value, event);
-    }
-  };
-
-  const onChangeHandler = event => {
     setValue(event.target.value);
-
-    if (onChange) {
-      debounceOnChange === true ? debounce(onChange, delay)(event) : onChange(event.target.value, event);
-    }
+    debounceOnChange ? inputWithDebounce(event) : onInput(event.target.value, event);
   };
 
   const classNames = "search ".concat(className);
+  const inputWithDebounce = (0, _react.useCallback)(debounce(onInput, delay), []);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: classNames,
     style: styles
@@ -71,7 +65,6 @@ const SearchBar = _ref => {
     value: value,
     placeholder: placeholder,
     onInput: onInputHandler,
-    onChange: onChangeHandler,
     onKeyPress: e => onKeyPressHandler(e.target.value, e)
   }), displayIcon && /*#__PURE__*/_react.default.createElement("span", {
     className: "search-icon",

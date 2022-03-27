@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./search-bar.css";
 import "font-awesome/css/font-awesome.min.css";
+import { useCallback } from "react";
 
 const SearchBar = ({
-  onInput,
-  onChange,
+  onInput = () => {},
   onKeyPressHandler = () => {},
   onIconClickHandler = () => {},
   Icon,
@@ -24,31 +24,26 @@ const SearchBar = ({
   }, [searchTerm]);
 
   const debounce = (func, delay) => {
-    let debounceTimer;
+    let timer;
     return function (event) {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => func(event.target.value, event), delay);
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        timer = null;
+        func(event.target.value, event);
+      }, delay);
     };
   };
 
   const onInputHandler = (event) => {
-    if (onInput) {
-      debounceOnChange === true
-        ? debounce(onInput, delay)(event)
-        : onInput(event.target.value, event);
-    }
-  };
-
-  const onChangeHandler = (event) => {
     setValue(event.target.value);
-    if (onChange) {
-      debounceOnChange === true
-        ? debounce(onChange, delay)(event)
-        : onChange(event.target.value, event);
-    }
+    debounceOnChange
+      ? inputWithDebounce(event)
+      : onInput(event.target.value, event);
   };
 
   const classNames = `search ${className}`;
+
+  const inputWithDebounce = useCallback(debounce(onInput, delay), []);
 
   return (
     <div className={classNames} style={styles}>
@@ -59,7 +54,6 @@ const SearchBar = ({
           value={value}
           placeholder={placeholder}
           onInput={onInputHandler}
-          onChange={onChangeHandler}
           onKeyPress={(e) => onKeyPressHandler(e.target.value, e)}
         ></input>
         {displayIcon && (
