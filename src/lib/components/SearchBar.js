@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./search-bar.css";
+import "font-awesome/css/font-awesome.min.css";
 
 const SearchBar = ({
   onInput,

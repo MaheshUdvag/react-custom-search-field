@@ -1,3 +1,3 @@
-import SearchBar from "./components/Badge";
+import SearchBar from "./components/SearchBar";
 
-export { SearchBar };
+export default SearchBar;
