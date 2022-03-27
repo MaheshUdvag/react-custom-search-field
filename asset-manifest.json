@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/react-custom-search-field/static/css/main.1696f958.css",
-    "main.js": "/react-custom-search-field/static/js/main.cd75c4fe.js",
+    "main.css": "/react-custom-search-field/static/css/main.94d44f74.css",
+    "main.js": "/react-custom-search-field/static/js/main.67eae41d.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/react-custom-search-field/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/react-custom-search-field/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/react-custom-search-field/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/react-custom-search-field/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/react-custom-search-field/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/react-custom-search-field/index.html",
-    "main.1696f958.css.map": "/react-custom-search-field/static/css/main.1696f958.css.map",
-    "main.cd75c4fe.js.map": "/react-custom-search-field/static/js/main.cd75c4fe.js.map"
+    "main.94d44f74.css.map": "/react-custom-search-field/static/css/main.94d44f74.css.map",
+    "main.67eae41d.js.map": "/react-custom-search-field/static/js/main.67eae41d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1696f958.css",
-    "static/js/main.cd75c4fe.js"
+    "static/css/main.94d44f74.css",
+    "static/js/main.67eae41d.js"
   ]
 }
